@@ -1,0 +1,44 @@
+{
+  "name": "unstoppable-group-name-lock",
+  "version": "3.0.0",
+  "description": "UNSTOPPABLE Facebook Group Name Lock - Auto-recovery, crash-proof, permanent lock system",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --expose-gc server.js",
+    "dev": "nodemon --expose-gc server.js",
+    "pm2": "pm2 start server.js --name group-lock --node-args='--expose-gc'",
+    "cluster": "pm2 start server.js -i max --name group-lock --node-args='--expose-gc'"
+  },
+  "keywords": [
+    "facebook",
+    "group-lock",
+    "unstoppable",
+    "anti-rename",
+    "fca-mafiya",
+    "websocket",
+    "express",
+    "persistent"
+  ],
+  "author": "MR PRINCE",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "fca-mafiya": "^1.0.0",
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrprince/group-name-lock"
+  },
+  "bugs": {
+    "url": "https://github.com/mrprince/group-name-lock/issues"
+  },
+  "homepage": "https://github.com/mrprince/group-name-lock#readme"
+}
